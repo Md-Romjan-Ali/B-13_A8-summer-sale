@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://www.vecteezy.com/photo/40341210-stylish-sunglasses-shot-using-pink-and-blue-abstract-colored-lighting-with-copy-space",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Men's Summer T-Shirt",
+    "brand": "CoolWear",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 20,
+    "description": "Lightweight cotton t-shirt designed for hot summer days.",
+    "image": "https://img.freepik.com/psd-premium/bright-red-tshirt-displayed-front-and-back_1296994-30148.jpg?semt=ais_hybrid&w=740&q=80",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "Women's Summer Dress",
+    "brand": "StyleBee",
+    "price": 25,
+    "rating": 4.8,
+    "stock": 15,
+    "description": "Elegant floral summer dress perfect for casual and beach wear.",
+    "image": "https://cdn.aboutstatic.com/file/images/1290ab4b43aa6599c794f82f4531da0d.png?bg=F4F4F5&quality=75&trim=1&height=480&width=360",
+    "category": "Clothing"
+  },
+  {
+    "id": 4,
+    "name": "Beach Sandals",
+    "brand": "WalkEasy",
+    "price": 10,
+    "rating": 4.3,
+    "stock": 30,
+    "description": "Comfortable and durable sandals ideal for beach and travel.",
+    "image": "https://www.shutterstock.com/image-photo/beach-sandals-on-sandy-sea-260nw-397230583.jpg",
+    "category": "Footwear"
+  },
+  {
+    "id": 5,
+    "name": "Summer Hat",
+    "brand": "SunGuard",
+    "price": 8,
+    "rating": 4.4,
+    "stock": 25,
+    "description": "Wide brim hat to protect you from harsh sunlight.",
+    "image": "https://images.stockcake.com/public/7/9/d/79de4f8d-6c82-4d07-b927-732691202674_large/beach-hat-style-stockcake.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 6,
+    "name": "Portable Mini Fan",
+    "brand": "CoolBreeze",
+    "price": 18,
+    "rating": 4.6,
+    "stock": 12,
+    "description": "Rechargeable mini fan to keep you cool during summer heat.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwzfWmSMo7yRbm1iD0jQS6zigwvHGnz5XGPQ&s",
+    "category": "Electronics"
+  }
+]
