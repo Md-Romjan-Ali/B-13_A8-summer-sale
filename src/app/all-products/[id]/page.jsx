@@ -1,6 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
-import { FaRegHeart, FaStar } from 'react-icons/fa';
+import { FaLongArrowAltLeft, FaRegHeart, FaStar } from 'react-icons/fa';
 
 const DetailsPage =async ({params}) => {
     const {id}=await params
@@ -65,10 +66,10 @@ const DetailsPage =async ({params}) => {
         </p>
 
         {/* Button */}
-        <div className="card-actions mt-2">
-          <button className="btn btn-primary w-full rounded-xl">
-            View Details
-          </button>
+        <div className="card-actions mt-2 flex justify-center">
+          <Link href={'/'}><button className="btn btn-primary w-full ">
+           <FaLongArrowAltLeft size={25}></FaLongArrowAltLeft> Back
+          </button></Link>
         </div>
       </div>
     </div>
