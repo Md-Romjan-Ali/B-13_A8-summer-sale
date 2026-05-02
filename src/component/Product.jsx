@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import { FaRegHeart, FaStar } from 'react-icons/fa';
 
+
 const Product =async () => {
   
     console.log();
@@ -59,9 +60,10 @@ const Product =async () => {
           </button></Link>
         </div>
       </div>
-    </div>
+    </div>   
             </div>)
            }
+       
         </div>
     );
 };

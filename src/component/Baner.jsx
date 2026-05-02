@@ -7,7 +7,7 @@ const Banner = () => {
       {/* Overlay */}
       <div className="w-full h-full rounded-lg bg-black/20 flex items-center ">
         <div className="max-w-7xl mx-auto px-6 ">
-          <h1 className="text-4xl bg-gradient-to-r from-purple-600 via-red-600 to-orange-400 bg-clip-text text-transparent md:text-6xl font-extrabold mb-4 max-w-2xl">
+          <h1 className="text-4xl bg-gradient-to-r from-purple-600 via-red-600 to-orange-400 bg-clip-text text-transparent md:text-6xl font-extrabold mb-4 text-center">
             Summer Sale <span className="italic">50% </span>OFF
           </h1>
           <p className="text-3xl font-bold text-center mb-6 max-w-xl text-gray-200 ">

@@ -2,7 +2,7 @@
 "use client" 
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+
 import { CiMenuBurger } from 'react-icons/ci';
 import logo from '@/assets/logo2.png'
 import { authClient } from '@/lib/auth-client';
@@ -35,6 +35,7 @@ await authClient.signOut();
       </ul>
     </div>
   <div className='flex items-center gap-2'>
+    
       <Image
     src={logo}
     width={60}
@@ -53,18 +54,21 @@ await authClient.signOut();
   
     
      <div className="navbar-end gap-4 text-[16px]">
-    <Image
+      {user &&
+          <Image
     src={user?.image}
-    width={60}
-    height={60}
+    width={20}
+    height={20}
     alt='baner image'
     className='bg-gray-200 h-15 w-15 rounded-full border-2 border-green-400 lg:ml-4'
     />
+      }
+  
       {
-      user ? <button onClick={signOut}>SignOut</button> :
+      user ? <button onClick={signOut} className='text-lg font-semibold btn btn-accent'>SignOut</button> :
       <div className='flex items-center gap-4'>
-         <Link href='/login' className='text-lg font-semibold'>Login</Link>
-    <Link href='/register' className='text-lg font-semibold'>Register</Link>
+         <Link href='/login' className='text-lg font-semibold btn btn-accent'>Login</Link>
+    <Link href='/register' className='text-lg font-semibold btn btn-accent'>Register</Link>
       </div>
    
      }

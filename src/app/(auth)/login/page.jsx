@@ -30,6 +30,12 @@ console.log(res,error);
            opacity:1
         }
     })
+    const signWithGoogle=async()=>{
+        const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  console.log(data);
+    }
     return (
         <animated.div className='mt-10' style={fade}>
          
@@ -49,7 +55,7 @@ console.log(res,error);
  </form>
  <p className="text-center border-r-2 border-gray-400 ">OR</p>
           
-          <button className="btn bg-white text-black border-[#e5e5e5]">
+          <button onClick={signWithGoogle} className="btn bg-white text-black border-[#e5e5e5]">
           <FcGoogle size={20}/>
            Login with Google
          </button>
