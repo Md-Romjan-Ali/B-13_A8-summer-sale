@@ -4,11 +4,6 @@ import { authClient } from '@/lib/auth-client';
 import { useForm } from 'react-hook-form';
 
 
-
-
-
-
-
 const UpdateProfile = () => {
     const {register,handleSubmit}=useForm()
         const updateProfile= async(data)=>{
@@ -16,9 +11,8 @@ const UpdateProfile = () => {
        await authClient.updateUser({
     image: data.image,
     name: data.name,
-    callbackURL: "/profile",
 })
-       console.log(data);
+     
     
         }
     return (

@@ -20,8 +20,8 @@ const Profile = () => {
                            alt='baner image'
                            className='bg-gray-200 grid mx-auto rounded-full border-2 border-green-400 mt-10'
                            />
-                          <h1 className='text-2xl mt-2 text-center font-bold my-3'>{user?.name} romna</h1>
-                          <h1 className='text-lg mb-4 text-center text-gray-400'>{user?.email}fgsd</h1>
+                          <h1 className='text-2xl mt-2 text-center font-bold my-3'>{user?.name}</h1>
+                          <h1 className='text-lg mb-4 text-center text-gray-400'>{user?.email}</h1>
                          <Link href={'/update'}> <button className='btn w-full'><FaEdit size={20} className='text-gray-400'></FaEdit>Update Profile</button></Link>
                          
                      </div>
