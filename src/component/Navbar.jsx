@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { CiMenuBurger } from 'react-icons/ci';
 import logo from '@/assets/logo2.png'
 import { authClient } from '@/lib/auth-client';
+import { redirect } from 'next/navigation';
 
 
 const Navbar = () => {
@@ -15,10 +16,14 @@ const Navbar = () => {
     const links=<div className='lg:flex items-center gap-5 text-[16px] font-semibold'>
     <Link href={'/'}><li>Home</li></Link>
     <Link href={'/all-products'}  className=''><li>All-Products</li></Link>
-    <Link href={'/profile'} className=''><li>My Profile</li></Link>
+    {
+      user && <Link href={'/profile'} className=''><li>My Profile</li></Link>
+    }
+    
     </div>
     const signOut=async()=>{
 await authClient.signOut();
+redirect('/login')
     }
     return (
         <div>

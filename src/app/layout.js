@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
             {children}
         </main>
       <Footer></Footer>
+        <ToastContainer />
         </body>
     </html>
   );

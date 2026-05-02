@@ -1,7 +1,9 @@
 "use client"
 
 import { authClient } from '@/lib/auth-client';
+import { redirect } from 'next/dist/server/api-utils';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 
 const UpdateProfile = () => {
@@ -12,7 +14,7 @@ const UpdateProfile = () => {
     image: data.image,
     name: data.name,
 })
-     
+     toast.success('Update Success')
     
         }
     return (
@@ -28,7 +30,7 @@ const UpdateProfile = () => {
          <input type="name"
          {...register('name',{required:true})}
          className="input" placeholder="Type your Update name" />
-       <input type="submit" value="Login" className='btn mt-2 w-full btn-primary btn-outline'/>
+       <input type="submit" value="Update" className='btn mt-2 w-full btn-primary btn-outline'/>
         </form>
        
        </fieldset>
