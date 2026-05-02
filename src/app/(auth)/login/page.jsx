@@ -1,15 +1,26 @@
 "use client"
 
+import { authClient } from '@/lib/auth-client';
 import { useSpring,animated } from '@react-spring/web';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { FcGoogle } from 'react-icons/fc';
 
-const LoginPage = () => {
+
+const LoginPage =() => {
+
     const {register,handleSubmit}=useForm()
-    const onSubmit=(data)=>{
+    const onSubmit= async(data)=>{
         console.log(data);
+        const { data:res, error } = await authClient.signIn.email({
+    email: data.email, // required
+    password: data.password, // required
+    rememberMe: true,
+    callbackURL: "/",
+});
+
+console.log(res,error);
     }
     const fade=useSpring({
         from:{

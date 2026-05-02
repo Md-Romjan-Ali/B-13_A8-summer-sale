@@ -1,5 +1,6 @@
 "use client"
 
+import { authClient } from '@/lib/auth-client';
 import { useSpring,animated } from '@react-spring/web';
 import Link from 'next/link';
 import React from 'react';
@@ -10,13 +11,14 @@ const RegisterPage = () => {
     const {register,handleSubmit}=useForm()
     const onSubmitHandle=async (data)=>{
     
-//           const { data:res, error } = await authClient.signUp.email({
-//     name: data.name, // required
-//     email: data.email, // required
-//     password: data.password, // required
-//     callbackURL: "/",
-// });
-// console.log(res,error);
+        const { data:res, error } = await authClient.signUp.email({
+    name: data.name, // required
+    email: data.email, // required
+    password: data.password, // required
+    image: data.image,
+    callbackURL: "/",
+});
+console.log(res,error);
     }
    const fade=useSpring({
         from:{
