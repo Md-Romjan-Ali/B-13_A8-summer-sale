@@ -25,7 +25,7 @@ const brands = [
 
 const SummerTips = () => {
   return (
-     <div className="bg-amber-200">
+     <div className="hover:scale-105 transition-all hover:border-r-gray-100">
       <h2 className="text-4xl my-10 font-bold text-center">
         Top Brands 
       </h2>
