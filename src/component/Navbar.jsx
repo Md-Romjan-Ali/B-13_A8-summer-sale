@@ -30,7 +30,7 @@ await authClient.signOut();
 redirect('/login')
     }
     return (
-        <div className='px-10'>
+        <div className='md:px-10'>
             <div className="navbar bg-base-100 shadow-sm">
 
   <div className='flex justify-between w-full'>
