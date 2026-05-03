@@ -3,11 +3,13 @@
 import { authClient } from '@/lib/auth-client';
 import { useSpring,animated } from '@react-spring/web';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FcGoogle } from 'react-icons/fc';
+import { toast } from 'react-toastify';
 
 const RegisterPage = () => {
+  const [errors,setErrors]=useState('')
     const {register,handleSubmit}=useForm()
     const onSubmitHandle=async (data)=>{
     
@@ -18,7 +20,14 @@ const RegisterPage = () => {
     image: data.image,
     callbackURL: "/",
 });
+if(errors){
+  toast.error(`${errors}`)
+  return;
+}else{
+  alert(`Register ${data.email} Successful`)
+}
 console.log(res,error);
+setErrors(error?.message)
     }
    const fade=useSpring({
         from:{
@@ -56,6 +65,7 @@ console.log(res,error);
   <input type="password"
   {...register('password',{required:true})}
   className="input" placeholder="Type your password" />
+  <p className='text-red-500'>{errors && `${errors}`}</p>
   <input type="submit" value="Register" className='btn btn-primary btn-outline mt-2'/>
 
  <p className="text-center border-r-2 border-gray-400 ">OR</p>

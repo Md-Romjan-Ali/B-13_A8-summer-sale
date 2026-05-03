@@ -2,14 +2,16 @@
 
 import { authClient } from '@/lib/auth-client';
 import { useSpring,animated } from '@react-spring/web';
+
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FcGoogle } from 'react-icons/fc';
+import { toast } from 'react-toastify';
 
 
 const LoginPage =() => {
-
+const [errors,setErrors]=useState('')
     const {register,handleSubmit}=useForm()
     const onSubmit= async(data)=>{
         console.log(data);
@@ -20,8 +22,15 @@ const LoginPage =() => {
     callbackURL: "/",
 });
 
-console.log(res,error);
+if(errors){
+    toast.error(`${errors}`)
+    return;
+}else{
+    toast.success('login Success')
+}
+setErrors(error.message)
     }
+    
     const fade=useSpring({
         from:{
             opacity:0
@@ -51,6 +60,7 @@ console.log(res,error);
   <input type="password"
   {...register('password',{required:true})}
   className="input" placeholder="Type your password" />
+  <p className='text-red-500'>{errors && `${errors}`}</p>
 <input type="submit" value="Login" className='btn mt-2 w-full btn-primary btn-outline'/>
  </form>
  <p className="text-center border-r-2 border-gray-400 ">OR</p>

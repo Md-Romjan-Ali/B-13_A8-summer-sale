@@ -1,7 +1,7 @@
-# B-13 A8 Summer Sale Project
+# B-13 SummerMarket Project
 
 ##  Project Name
-B-13 A8 Summer Sale
+SummerMarket
 
 ##  Purpose
 This project is a simple eCommerce or product showcase web application built for a summer sale campaign.  

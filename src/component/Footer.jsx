@@ -42,7 +42,7 @@ const Footer = () => {
     <div></div>
 
           {/* Company */}
-          <div className="text-xl">
+          <div className="text-xl ">
             <h3 className=" font-semibold text-black dark:text-white mb-4">
               Company
             </h3>
@@ -88,7 +88,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="mt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 dark:text-gray-400">
-          <p>© {new Date().getFullYear()} pixgen. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} SummerMarket. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
             <Link

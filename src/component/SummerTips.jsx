@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import './Responsive.css'
 const brands = [
   {
     name: "SunShade",
@@ -30,7 +30,7 @@ const SummerTips = () => {
         Top Brands 
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+      <div className="brandCard gap-5">
         {
         brands.map((brand,index)=>
           <div key={index} className="text-center border-t-2 border-red-600 rounded-xl  p-5 bg-gray-200 ">

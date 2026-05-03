@@ -2,29 +2,29 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaRegHeart, FaStar } from 'react-icons/fa';
-
+import '@/component/Responsive.css'
 const AllProducts =async () => {
     const res=await fetch('https://b-13-a8-summer-sale.vercel.app/data.json')
     const products=await res.json()
     
     return (
-        <div className='grid mt-5 sm:grid-cols-1 md:grid-cols-3 gap-4'>
+        <div className='grid mt-5 productCard gap-4 max-w-300 mx-auto'>
            {
             products.map(product=><div key={product.id}>
                 <div className="card bg-base-100 shadow-md hover:shadow-xl transition duration-300 rounded-2xl group">
 
       {/* Wishlist Icon */}
-      <div className="absolute right-3 top-3 z-10 bg-white p-2 rounded-full shadow cursor-pointer hover:text-red-500">
+      <div className="absolute right-3 top-3 z-10 bg-white p-2 rounded-full shadow cursor-pointer ">
         <FaRegHeart />
       </div>
 
       {/* Image */}
-      <figure className="relative h-52 bg-gray-100">
+      <figure className="relative rounded-2xl h-52 bg-gray-100">
         <Image
           src={product.image}
           alt={product.name}
           fill
-          className="object-contain p-3 group-hover:scale-105 transition-all rounded-xl "
+          className="object-contain p-3 group-hover:scale-105 transition-all rounded-xl"
         />
       </figure>
 

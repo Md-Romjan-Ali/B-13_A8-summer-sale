@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import { FaRegHeart, FaStar } from 'react-icons/fa';
 
-
+import './Responsive.css'
 const Product =async () => {
   
     console.log();
@@ -11,7 +11,7 @@ const Product =async () => {
     const products=await res.json()
    
     return (
-        <div className='grid border-t-2 p-5 border-green-400 my-10 sm:grid-cols-1 md:grid-cols-3 gap-4'>
+        <div className='border-t-2 p-5 border-green-400 my-10 productCard gap-4'>
            {
             products.slice(0,3).map(product=><div key={product.id}>
                 <div className="card bg-base-100 shadow-md hover:shadow-xl transition duration-300 rounded-2xl group">

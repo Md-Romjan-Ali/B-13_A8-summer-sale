@@ -3,7 +3,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const SummerTipsHydration = () => {
     return (
-        <div className='mt-10 w-full flex gap-2 items-center bg-red-500 p-4 rounded-xl'>
+        <div className='mt-10 space-y-3 w-full gap-2 bg-red-500 p-4 rounded-xl'>
             <h1 className='text-2xl font-semibold '>Summer Care Tips-</h1>
            <div className='text-2xl'>
              <Typewriter
