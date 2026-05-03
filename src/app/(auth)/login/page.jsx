@@ -20,15 +20,18 @@ const [errors,setErrors]=useState('')
     password: data.password, // required
     rememberMe: true,
     callbackURL: "/",
+    
 });
 
-if(errors){
-    toast.error(`${errors}`)
-    return;
-}else{
+if(error){
+   
+    toast.error(`${error.message}`)
+
+}else if(res){
+    setErrors('')
     toast.success('login Success')
 }
-setErrors(error.message)
+  setErrors(error.message)
     }
     
     const fade=useSpring({

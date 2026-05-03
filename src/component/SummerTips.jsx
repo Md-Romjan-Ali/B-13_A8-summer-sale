@@ -25,7 +25,7 @@ const brands = [
 
 const SummerTips = () => {
   return (
-     <div className="hover:scale-105 transition-all hover:border-r-gray-100">
+     <div className=" ">
       <h2 className="text-4xl my-10 font-bold text-center">
         Top Brands 
       </h2>
@@ -33,7 +33,7 @@ const SummerTips = () => {
       <div className="brandCard gap-5">
         {
         brands.map((brand,index)=>
-          <div key={index} className="text-center border-t-2 border-red-600 rounded-xl  p-5 bg-gray-200 ">
+          <div key={index} className="text-center border-t-2 border-red-600 rounded-xl  p-5 bg-gray-200 hover:scale-105 transition-all">
               <Image 
             width={50}
             height={50}
